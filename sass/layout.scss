@@ -1,0 +1,11 @@
+/**
+ * @file layour.scss
+ *   Since we always use a framework, the heavy lifting of arranging components
+ *   is already done for you via the framework's grid system. Use this
+ *   stylesheet for overrides to the framework. You can also define component
+ *   or element padding and margins here along with padding and margins for
+ *   page sections.
+ */
+@import "vars";
+@import "mixins";
+@import "compass/_compass.scss";
