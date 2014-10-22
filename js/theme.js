@@ -1,4 +1,12 @@
 (function ($) {
+  // set the default bootstrap breakpoints
+  var breakpoints = {
+    xs : 768,
+    sm : 992,
+    md : 1200
+  },
+  width = $(window).width();
+  
   /**
    * Swap out svg files for PNGs on unsupporting devices. Modrnizr determines
    * what an unsupporting device is by adding the .no-svg class to the html
@@ -22,7 +30,7 @@
    */
   $(window).resize(function() {
     waitForFinalEvent(function() {
-      var width = $(window).width();
+      width = $(window).width();
       // Place functions here
     }, 500, "");
   });
