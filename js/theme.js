@@ -19,6 +19,17 @@
       $(this).attr('src', src);
     });
   }
+  
+  /**
+   * Gives each bootstrap tab a unique URL.
+   */
+  var url = document.location.toString();
+  if (url.match('#')) {
+    $('.nav-tabs a[href=#'+url.split('#')[1]+']').tab('show') ;
+  }
+  $('.nav-tabs a').on('shown.bs.tab', function(e) {
+    window.location.hash = e.target.hash;
+  })
 
   /**
    * Stuff to run immediately upon page load
