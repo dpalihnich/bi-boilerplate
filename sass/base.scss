@@ -12,3 +12,21 @@
 @import "vars";
 @import "mixins";
 @import "compass/_compass.scss";
+
+html, body {
+  height: 100%;
+}
+
+.outer-wrapper {
+  min-height: 100%;
+}
+
+.inner-wrapper {overflow:auto;
+	padding-bottom: $footer-height; // must be same height as the footer
+} 
+
+footer {position: relative;
+	margin-top: -1 * $footer-height; // negative value of footer height
+	height: $footer-height;
+	clear:both;
+} 
