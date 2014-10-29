@@ -1,3 +1,7 @@
+//
+//  SASS MIXINS (Helpers)
+//
+
 // columns
 @mixin columns($cols: 2) {
   ul {
@@ -75,22 +79,38 @@
 }
 
 //positioning helpers
-@mixin absolute-center(){
+@mixin absolute-center($width, $height){
   position:absolute;
   left:50%;
   top:50%;
-  @include translateX(-50%);
-  @include translateY(-50%);
+  @if $width {
+    margin-left:-.5 * $width;
+  } @else {
+    @include translateX(-50%);
+  }
+  @if $height {
+    margin-top:-.5 * $height
+  } @else {
+    @include translateY(-50%);
+  }
 }
-@mixin absolute-x(){
+@mixin absolute-x($width){
   position:absolute;
   left:50%;
-  @include translateX(-50%);
+  @if $width {
+    margin-left:-.5 * $width;
+  } @else {
+    @include translateX(-50%);
+  }
 }
-@mixin absolute-y(){
+@mixin absolute-y($height){
   position:absolute;
   top:50%;
-  @include translateY(-50%);
+  @if $height {
+    margin-top:-.5 * $height
+  } @else {
+    @include translateY(-50%);
+  }
 }
 @mixin center() {
   margin-left:auto;
