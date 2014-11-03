@@ -79,7 +79,7 @@
 }
 
 //positioning helpers
-@mixin absolute-center($width, $height){
+@mixin absolute-center($width: false, $height: false){
   position:absolute;
   left:50%;
   top:50%;
@@ -94,7 +94,7 @@
     @include translateY(-50%);
   }
 }
-@mixin absolute-x($width){
+@mixin absolute-x($width: false){
   position:absolute;
   left:50%;
   @if $width {
@@ -103,7 +103,7 @@
     @include translateX(-50%);
   }
 }
-@mixin absolute-y($height){
+@mixin absolute-y($height: false){
   position:absolute;
   top:50%;
   @if $height {
